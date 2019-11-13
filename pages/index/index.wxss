@@ -1,0 +1,56 @@
+/**index.wxss**/
+.module-group{
+  width: 100%;
+}
+.module-group .module{
+  padding: 40rpx;
+  background-color: #fff;
+}
+.module-group .module .module-top{
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 0;
+  font-size: 30rpx;
+
+}
+.module-group .module .module-top text{
+  color: #494949;
+  /* font-weight: bold; */
+}
+.module-group .module .module-top navigator{
+  color: #43ba56;
+}
+
+.module-group .module .module-scroll-view{
+  width: 100%;
+  white-space: nowrap;
+}
+.module-group .module .module-scroll-view .scroll-view-navigator{
+  width: 200rpx;
+  display: inline-block;
+  margin-right: 40rpx;
+
+}
+.module-group .module .module-scroll-view .scroll-view-navigator .scroll-view-item{
+  width: 200rpx;
+  height: 400rpx;
+  margin-top: 20rpx;
+  /* display: inline-block; */
+  position: relative;
+}
+.module-group .module .module-scroll-view .scroll-view-navigator .scroll-view-item image{
+  width: 200rpx;
+  height: 284rpx;
+}
+.module-group .module .module-scroll-view .scroll-view-navigator .scroll-view-item text{
+  color: #494949;
+  position: absolute;
+  left:0;
+  bottom:55rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.module-group .module .module-scroll-view  .scroll-view-navigator:last-child{
+margin-right: 0;
+padding-right: 0;
+}

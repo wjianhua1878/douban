@@ -1,0 +1,123 @@
+<searchBar isNavigator="{{true}}"></searchBar>
+<view class="module-group">
+  <view class="module">
+    <view class="module-top">
+      <text>影院热映</text>
+      <navigator>查看更多</navigator>
+    </view>
+    <scroll-view class="module-scroll-view" scroll-x="{{true}}">
+      <navigator class="scroll-view-navigator">
+        <view class="scroll-view-item">
+          <image class="scroll-view-item-image" src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2572390547.webp"></image>
+          <text class="scroll-view-item-title">海上钢琴师</text>
+        </view>
+      </navigator>
+        <navigator class="scroll-view-navigator">
+        <view class="scroll-view-item">
+          <image class="scroll-view-item-image" src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2572390547.webp"></image>
+          <text class="scroll-view-item-title">海上钢琴师</text>
+        </view>
+      </navigator>  <navigator class="scroll-view-navigator">
+        <view class="scroll-view-item">
+          <image class="scroll-view-item-image" src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2572390547.webp"></image>
+          <text class="scroll-view-item-title">海上钢琴师</text>
+        </view>
+      </navigator>  <navigator class="scroll-view-navigator">
+        <view class="scroll-view-item">
+          <image class="scroll-view-item-image" src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2572390547.webp"></image>
+          <text class="scroll-view-item-title">海上钢琴师</text>
+        </view>
+      </navigator>  <navigator class="scroll-view-navigator">
+        <view class="scroll-view-item">
+          <image class="scroll-view-item-image" src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2572390547.webp"></image>
+          <text class="scroll-view-item-title">海上钢琴师</text>
+        </view>
+      </navigator>  <navigator class="scroll-view-navigator">
+        <view class="scroll-view-item">
+          <image class="scroll-view-item-image" src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2572390547.webp"></image>
+          <text class="scroll-view-item-title">海上钢琴师</text>
+        </view>
+      </navigator>
+    </scroll-view>
+  </view>
+  <view class="module">
+    <view class="module-top">
+      <text>影院热映</text>
+      <navigator>查看更多</navigator>
+    </view>
+    <scroll-view class="module-scroll-view" scroll-x="{{true}}">
+      <navigator class="scroll-view-navigator">
+        <view class="scroll-view-item">
+          <image class="scroll-view-item-image" src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2572390547.webp"></image>
+          <text class="scroll-view-item-title">海上钢琴师</text>
+        </view>
+      </navigator>
+        <navigator class="scroll-view-navigator">
+        <view class="scroll-view-item">
+          <image class="scroll-view-item-image" src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2572390547.webp"></image>
+          <text class="scroll-view-item-title">海上钢琴师</text>
+        </view>
+      </navigator>  <navigator class="scroll-view-navigator">
+        <view class="scroll-view-item">
+          <image class="scroll-view-item-image" src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2572390547.webp"></image>
+          <text class="scroll-view-item-title">海上钢琴师</text>
+        </view>
+      </navigator>  <navigator class="scroll-view-navigator">
+        <view class="scroll-view-item">
+          <image class="scroll-view-item-image" src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2572390547.webp"></image>
+          <text class="scroll-view-item-title">海上钢琴师</text>
+        </view>
+      </navigator>  <navigator class="scroll-view-navigator">
+        <view class="scroll-view-item">
+          <image class="scroll-view-item-image" src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2572390547.webp"></image>
+          <text class="scroll-view-item-title">海上钢琴师</text>
+        </view>
+      </navigator>  <navigator class="scroll-view-navigator">
+        <view class="scroll-view-item">
+          <image class="scroll-view-item-image" src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2572390547.webp"></image>
+          <text class="scroll-view-item-title">海上钢琴师</text>
+        </view>
+      </navigator>
+    </scroll-view>
+  </view>
+  <view class="module">
+    <view class="module-top">
+      <text>影院热映</text>
+      <navigator>查看更多</navigator>
+    </view>
+    <scroll-view class="module-scroll-view" scroll-x="{{true}}">
+      <navigator class="scroll-view-navigator">
+        <view class="scroll-view-item">
+          <image class="scroll-view-item-image" src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2572390547.webp"></image>
+          <text class="scroll-view-item-title">海上钢琴师</text>
+        </view>
+      </navigator>
+        <navigator class="scroll-view-navigator">
+        <view class="scroll-view-item">
+          <image class="scroll-view-item-image" src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2572390547.webp"></image>
+          <text class="scroll-view-item-title">海上钢琴师</text>
+        </view>
+      </navigator>  <navigator class="scroll-view-navigator">
+        <view class="scroll-view-item">
+          <image class="scroll-view-item-image" src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2572390547.webp"></image>
+          <text class="scroll-view-item-title">海上钢琴师</text>
+        </view>
+      </navigator>  <navigator class="scroll-view-navigator">
+        <view class="scroll-view-item">
+          <image class="scroll-view-item-image" src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2572390547.webp"></image>
+          <text class="scroll-view-item-title">海上钢琴师</text>
+        </view>
+      </navigator>  <navigator class="scroll-view-navigator">
+        <view class="scroll-view-item">
+          <image class="scroll-view-item-image" src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2572390547.webp"></image>
+          <text class="scroll-view-item-title">海上钢琴师</text>
+        </view>
+      </navigator>  <navigator class="scroll-view-navigator">
+        <view class="scroll-view-item">
+          <image class="scroll-view-item-image" src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2572390547.webp"></image>
+          <text class="scroll-view-item-title">海上钢琴师</text>
+        </view>
+      </navigator>
+    </scroll-view>
+  </view>
+</view>
