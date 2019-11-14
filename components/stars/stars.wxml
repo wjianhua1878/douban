@@ -1,0 +1,7 @@
+<view class="score">
+  <image class="star" src="/images/star1.png" wx:for="{{star1}}"  wx:key="*this" style="width:{{starSize}}rpx;height:{{starSize}}rpx"></image>
+  <image class="star" src="/images/star2.png" wx:for="{{star2}}"  wx:key="*this" style="width:{{starSize}}rpx;height:{{starSize}}rpx"></image>
+  <image class="star" src="/images/star3.png" wx:for="{{star3}}" wx:key="*this" style="width:{{starSize}}rpx;height:{{starSize}}rpx"></image>
+  <text class="score-number" wx:if="{{score}}" style="font-size:{{fontSize}}rpx;color:{{fontColor}}">{{scoreText}}</text>
+  <text class="score-number" wx:else style="font-size:{{fontSize}}rpx;color:{{fontColor}}">未评分</text>
+</view>

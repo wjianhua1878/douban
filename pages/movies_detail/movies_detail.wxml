@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="top_group">
+    <image class="top-group-image" src="{{movies_detail.image_url}}"></image>
+    <view class="info-group">
+      <view class="info-group-title">{{movies_detail.title}}  {{movies_detail.year}}</view>
+      <view class="info-group-title-english">{{movies_detail.original_title}}</view>
+      <view class="info-group-movieInfo">{{movies_detail.info}}</view>
+      <view class="button-group">
+        <button class="btn">想看</button>
+        <button class="btn">看过</button>
+      </view>
+    </view>
+  </view>
+</view>
+
