@@ -28,7 +28,7 @@ Page({
     this.setData({
       movies_detail: obj
     })
-    console.log(this.data.movies_detail);
+    // console.log(this.data.movies_detail);
   },
 
   /**

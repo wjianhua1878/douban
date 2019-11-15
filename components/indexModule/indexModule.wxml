@@ -1,0 +1,9 @@
+<view class="module">
+  <view class="module-top">
+    <text>{{title}}</text>
+    <navigator url="{{moreUlr}}" hover-stay-time>查看更多</navigator>
+  </view>
+  <scroll-view class="module-scroll-view" scroll-x="{{true}}">
+    <moduleItem wx:for="{{items}}" wx:key="title" item="{{item}}"></moduleItem>
+  </scroll-view>
+</view>

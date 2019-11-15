@@ -1,0 +1,33 @@
+/**index.wxss**/
+
+.module {
+  padding: 40rpx;
+  background-color: #f5f5f5;
+  margin-bottom: 20rpx;
+}
+
+.module .module-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 0;
+  font-size: 30rpx;
+}
+
+.module .module-top text {
+  color: #494949;
+  /* font-weight: bold; */
+}
+
+.module .module-top navigator {
+  color: #43ba56;
+}
+
+.module .module-scroll-view {
+  width: 100%;
+  white-space: nowrap;
+}
+
+.scroll-view  .scroll-view-navigator:last-child {
+  margin-right: 0;
+  padding-right: 0;
+}

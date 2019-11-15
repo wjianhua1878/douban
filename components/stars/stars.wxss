@@ -38,4 +38,5 @@
   position: static;
   font-size: 25rpx;
   margin-left: 10rpx;
+  white-space: nowrap
 }

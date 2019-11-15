@@ -45,7 +45,7 @@ Component({
       let score = _this.properties.score;
       score =  score <=10 ? score : 10;
       // console.log(score);
-      let scoreText = (score && (score>0)) ? score.toFixed(1) : "未评分";
+      let scoreText = (score && (score>0)) ? score.toFixed(1) : "";
       
       let intScore = parseInt(score);
       //满星的星星数量

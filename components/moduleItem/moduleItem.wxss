@@ -1,0 +1,32 @@
+.scroll-view-navigator {
+  /* height: 180rpx; */
+  width: 200rpx;
+  display: inline-block;
+  margin: 0 20rpx; 
+}
+
+.scroll-view-navigator .scroll-view-item {
+  width: 200rpx;
+  height: 400rpx;
+  margin-top: 20rpx;
+  /* display: inline-block; */
+  position: relative;
+}
+
+.scroll-view-navigator .scroll-view-item .scroll-view-item-image {
+  width: 200rpx;
+  height: 284rpx;
+}
+
+.scroll-view-navigator .scroll-view-item .scroll-view-item-title {
+  width: 200rpx;
+  color: #494949;
+  position: absolute;
+  left: 10rpx;
+  bottom: 55rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap
+}
+
+

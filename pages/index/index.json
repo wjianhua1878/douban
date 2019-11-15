@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "searchBar":"/components/searchBar/searchBar",
-    "stars":"/components/stars/stars"
+    "stars":"/components/stars/stars",
+    "indexModule":"/components/indexModule/indexModule"
   }
 }

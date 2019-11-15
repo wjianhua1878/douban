@@ -1,0 +1,3 @@
+<view class="container">
+  <moduleItem wx:for="{{lists}}" item="{{item}}" wx:key="title"></moduleItem>
+</view>
