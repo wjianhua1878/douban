@@ -2,8 +2,14 @@
 <view class="module-group">
   <!-- 电影 -->
   <indexModule title="影院热映" items="{{movies}}" moreUlr="/pages/more/more?type=movies"></indexModule>
+  <!-- 近期热门电影 -->
+  <indexModule title="近期热门电影" items="{{hotMovies}}" moreUlr="/pages/more/more?type=hotMovies"></indexModule>
+  <!-- 即将上映 -->
+  <indexModule title="即将上映" items="{{movieSoon}}" moreUlr="/pages/more/more?type=movieSoon"></indexModule>
   <!-- 电视剧 -->
   <indexModule title="电视剧" items="{{tv}}" moreUlr="/pages/more/more?type=tv"></indexModule>
   <!-- 综艺 -->
   <indexModule title="综艺" items="{{varietyShow}}" moreUlr="/pages/more/more?type=varietyShow"></indexModule>
 </view>
+
+<!-- movie_showing  movie_soon movie_selected_collections movie_subject_ad movie_subject_suggestion -->

@@ -1,63 +1,51 @@
 // pages/more/more.js
 let count = 20;
+import {
+  getMovies,
+  getMoviesSoon,
+  getHotMovies,
+  getTv,
+  getVarietyShow
+} from "../../service/api/index.js"
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    lists:[]
-    
+    lists: []
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    console.log(options);
+    // console.log(options);
     this.data.type = options.type;
-    if (options.type === 'movies') {
-      wx.request({ //电影
-        url: 'https://m.douban.com/rexxar/api/v2/subject_collection/movie_showing/items?count=20',
-        success: res => {
-          // console.log(res);
-          // console.log(res.data.subject_collection_items);
-          let movieArr = res.data.subject_collection_items; //[{},{}]
-
-          this.setData({
-            lists: movieArr,
-
-          })
-        }
-      });
-    } else if (options.type === 'tv'){
-      wx.request({//电视剧
-        url: 'https://m.douban.com/rexxar/api/v2/subject_collection/tv_hot/items?count=10',
-        success: res => {
-          // console.log(res);
-          // console.log(res.data.subject_collection_items);
-          let tvArr = res.data.subject_collection_items;//[{},{}]
-          this.setData({
-            lists: tvArr,
-          })
-        }
-      }); 
-    } else if (options.type === 'varietyShow'){
-      wx.request({//综艺
-        url: 'https://m.douban.com/rexxar/api/v2/subject_collection/tv_variety_show/items?count=10',
-        success: res => {
-          // console.log(res);
-          // console.log(res.data.subject_collection_items);
-          let varietyShowArr = res.data.subject_collection_items;//[{},{}
-          this.setData({
-            lists: varietyShowArr
-          })
-        }
-      });
+    let optionsType = options.type;
+    let type = {
+      "movies": () => {
+        this.getRequestData(getMovies, 20)
+      },
+      "tv": () => {
+        this.getRequestData(getTv, 20)
+      },
+      "varietyShow": () => {
+        this.getRequestData(getVarietyShow, 20)
+      },
+      "hotMovies": () => {
+        this.getRequestData(getHotMovies, 20)
+      },
+      "movieSoon": () => {
+        this.getRequestData(getMoviesSoon, 20)
+      }
     }
-    
+    type[optionsType]();
+
 
   },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -103,50 +91,25 @@ Page({
       title: '加载中',
     });
     count = count + 10;
-    if (this.data.type === 'movies'){
-      wx.request({ //电影
-        url: 'https://m.douban.com/rexxar/api/v2/subject_collection/movie_showing/items?count=' + count,
-        success: res => {
-          // console.log(res);
-          // console.log(res.data.subject_collection_items);
-          let movieArr = res.data.subject_collection_items; //[{},{}]
-
-          this.setData({
-            lists: movieArr,
-          });
-          wx.hideLoading();
-        }
-      });
-    }else if(this.data.type === 'tv'){
-      wx.request({ //电视剧
-        url: 'https://m.douban.com/rexxar/api/v2/subject_collection/tv_hot/items?count=' + count,
-        success: res => {
-          // console.log(res);
-          // console.log(res.data.subject_collection_items);
-          let movieArr = res.data.subject_collection_items; //[{},{}]
-
-          this.setData({
-            lists: movieArr,
-          });
-          wx.hideLoading();
-        }
-      });
-    } else if (this.data.type === 'varietyShow'){
-      wx.request({ //综艺
-        url: 'https://m.douban.com/rexxar/api/v2/subject_collection/tv_variety_show/items?count=' + count,
-        success: res => {
-          // console.log(res);
-          // console.log(res.data.subject_collection_items);
-          let movieArr = res.data.subject_collection_items; //[{},{}]
-
-          this.setData({
-            lists: movieArr,
-          });
-          wx.hideLoading();
-        }
-      });
+    let type = {
+      "movies": () => {
+        this.getRequestData(getMovies, count);
+      },
+      "tv": () => {
+        this.getRequestData(getTv, count);
+      },
+      "varietyShow": () => {
+        this.getRequestData(getVarietyShow, count);
+      },
+      "hotMovies": () => {
+        this.getRequestData(getHotMovies, count);
+      },
+      "movieSoon": () => {
+        this.getRequestData(getMoviesSoon, count);
+      }
     }
-  
+    type[this.data.type]();
+
   },
 
   /**
@@ -154,5 +117,16 @@ Page({
    */
   onShareAppMessage: function() {
 
-  }
+  },
+  getRequestData: function (fn, count = 10) {
+    fn(count).then(res => {
+      let result = res.data.subject_collection_items; //[{},{}]
+      this.setData({
+        lists: result,
+      })
+      wx.hideLoading();
+    }).catch(err => {
+      console.log(err)
+    });
+  },
 })

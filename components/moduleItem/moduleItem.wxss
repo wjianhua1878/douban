@@ -28,5 +28,13 @@
   overflow: hidden;
   white-space: nowrap
 }
+.scroll-view-item-release_date{
+  position: absolute;
+  left: 0;
+  bottom: 10rpx;
+  color: #ccc;
+  font-size: 25rpx;
+  /* margin-left: 10rpx; */
+}
 
 

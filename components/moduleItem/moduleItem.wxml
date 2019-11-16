@@ -2,6 +2,8 @@
   <view class="scroll-view-item">
     <image class="scroll-view-item-image" src="{{item.cover.url}}"></image>
     <text class="scroll-view-item-title">{{item.title}}</text>
-    <stars score="{{item.rating.value}}"></stars>
+    <stars score="{{item.rating.value}}" ></stars>
+    <!-- <text class="scroll-view-item-release_date" wx:else>上映时间{{item.release_date}}</text> -->
+
   </view>
 </navigator>
