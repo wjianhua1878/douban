@@ -1,70 +1,72 @@
 //index.js
 //获取应用实例
+import {
+  getMovies,
+  getMoviesSoon,
+  getHotMovies,
+  getTv,
+  getVarietyShow
+} from '../../service/api/index.js'
 const app = getApp()
 
 Page({
   data: {
-    movies:[],//电影列表
-    tv:[],//电视
-    varietyShow:[],//综艺
-    comingSoon:[]//即将上映
-   
-   
+    movies: [], //电影列表
+    tv: [], //电视
+    varietyShow: [], //综艺
+    hotMovies: [], //热门电影
+    movieSoon: []
   },
   onLoad: function() {
-    wx.request({//电影
-      url: 'https://m.douban.com/rexxar/api/v2/subject_collection/movie_showing/items?count=10',
-      success: res => {
-        // console.log(res);
-        // console.log(res.data.subject_collection_items);
-        let movieArr = res.data.subject_collection_items;//[{},{}]
-        
-        this.setData({
-          movies: movieArr,
-          
-        })
-      }
+
+    //电影
+    getMovies().then(res => {
+      let movies = res.data.subject_collection_items; //[{},{}]
+      this.setData({
+        movies,
+      })
+    }).catch(err => {
+      console.log(err);
     });
-    wx.request({//电视剧
-      url: 'https://m.douban.com/rexxar/api/v2/subject_collection/tv_hot/items?count=10',
-      success: res => {
-        // console.log(res);
-        // console.log(res.data.subject_collection_items);
-        let tvArr = res.data.subject_collection_items;//[{},{}]
-        this.setData({
-          tv: tvArr,
-        })
-      }
-    }); 
-    wx.request({//综艺
-      url: 'https://m.douban.com/rexxar/api/v2/subject_collection/tv_variety_show/items?count=10',
-      success: res => {
-        // console.log(res);
-        // console.log(res.data.subject_collection_items);
-        let varietyShowArr = res.data.subject_collection_items;//[{},{}
-        this.setData({
-          varietyShow: varietyShowArr
-        })
-      }
+
+    //即将上映
+    getMoviesSoon().then(res => {
+      let movieSoon = res.data.subject_collection_items; //[{},{}      
+      this.setData({
+        movieSoon,
+      })
+    }).catch(err => {
+      console.log(err);
     });
-    wx.request({//即将上映
-      url: 'https://douban.uieee.com/v2/movie/coming_soon?count=10',
-      header:{
-        'content-type': 'json'
-      },
-      success: res => {
-        console.log(res);
-        // console.log(res.data.subject_collection_items);
-        // let varietyShowArr = res.data.subject_collection_items;//[{},{}
-        // this.setData({
-        //   varietyShow: varietyShowArr
-        // })
-      }
+    //电视剧
+    getTv().then(res => {
+      let tv = res.data.subject_collection_items; //[{},{}      
+      this.setData({
+        tv,
+      })
+    }).catch(err => {
+      console.log(err);
     });
-  },
-  onClickNavigator(){
-    wx.navigateTo({
-      url: 'pages/movies_detail/movies_detail?image_url={{item.cover.url}}&title={{item.title}}&year={{item.year}}&original_title={{item.original_title}}&info={{item.info}}',
-    })
+    //综艺
+    getVarietyShow().then(res => {
+      let varietyShow = res.data.subject_collection_items; //[{},{}      
+      this.setData({
+        varietyShow,
+      })
+    }).catch(err => {
+      console.log(err);
+    });
+
+    //近期热门电影
+    getHotMovies().then(res => {
+      let hotMovies = res.data.subject_collection_items; //[{},{}      
+      this.setData({
+        hotMovies,
+      })
+    }).catch(err => {
+      console.log(err);
+    });
+    
   }
+  
 })
