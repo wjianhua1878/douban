@@ -1,0 +1,84 @@
+.container{
+  background-color: #fbf7f4;
+  margin: 0;
+}
+.commet-group {
+  background-color: #fbf7f4;
+  padding: 20rpx;
+  margin: 20rpx;
+  box-sizing: border-box;
+}
+
+.commet-group .comment-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx;
+  background-color: #fff;
+  border-bottom: 1px solid #f5f5f5;
+
+}
+
+.commet-group .comment-title .title-left {
+  font-size: 40rpx;
+  color: #000;
+}
+
+.commet-group .comment-title .title-right {
+  font-size: 25rpx;
+  color: #595959;
+}
+
+.commet-group .comment-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.commet-group .comment-item .item-top {
+  display: flex;
+  margin-top: 10rpx;
+}
+
+.commet-group .comment-item .item-top>image {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  margin: 0 20rpx;
+}
+
+.commet-group .comment-item .item-top .item-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.commet-group .comment-item .item-top .item-info .name {
+  font-size: 32rpx;
+  color: #000;
+}
+
+.commet-group .comment-item .item-top .item-info .item-rating {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.commet-group .comment-item .item-top .item-info .item-rating .date {
+  font-size: 25rpx;
+  color: #ccc;
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+}
+
+.commet-group .comment-item .item-content {
+  font-size: 32rpx;
+  padding: 0 20rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+

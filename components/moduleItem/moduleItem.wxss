@@ -2,7 +2,7 @@
   /* height: 180rpx; */
   width: 200rpx;
   display: inline-block;
-  margin: 0 20rpx; 
+  margin: 0 10rpx; 
 }
 
 .scroll-view-navigator .scroll-view-item {
@@ -21,12 +21,14 @@
 .scroll-view-navigator .scroll-view-item .scroll-view-item-title {
   width: 200rpx;
   color: #494949;
-  position: absolute;
-  left: 10rpx;
-  bottom: 55rpx;
+  /* position: absolute; */
+  /* left: 10rpx; */
+  /* bottom: 55rpx; */
+  display: block;
   text-overflow: ellipsis;
   overflow: hidden;
-  white-space: nowrap
+  white-space: nowrap;
+  text-align: center;
 }
 .scroll-view-item-release_date{
   position: absolute;

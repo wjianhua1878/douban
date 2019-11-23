@@ -18,3 +18,15 @@ export const getVarietyShow = (count = 10) => wxRequest(BASE_URL + 'tv_variety_s
 
 //获取首页近期热门电影列表
 export const getHotMovies = (count = 10) => wxRequest(BASE_URL + 'movie_hot/items?count=' + count);
+
+//获取电影详情
+export const getInfoById = (type,id) => wxRequest('https://m.douban.com/rexxar/api/v2/'+type+'/' + id);
+
+//获取电影详情页标签
+export const getTags = (type,id,count = 8) => wxRequest('https://m.douban.com/rexxar/api/v2/'+type+'/'+id+'/tags?count='+count);
+
+//获取短评
+export const getComments = (type,id,star,count) => wxRequest('https://m.douban.com/rexxar/api/v2/'+type+'/'+id+'/interests?start='+star+'&count='+count);
+
+//搜索电影
+export const getMoviesByInfo = (info) => wxRequest('https://m.douban.com/rexxar/api/v2/search?type=movie&q=' + info);

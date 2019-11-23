@@ -1,0 +1,24 @@
+<view class="container">
+
+<view class="commet-group">
+    <view class="comment-title">
+      <text class="title-left">短评</text>
+      <text class="title-right">全部{{commentsTotal}} ></text>
+    </view>
+    <view class="comment-item" wx:for="{{comments}}" wx:key="*id">
+      <view class="item-top">
+        <image src="{{item.user.avatar}}"></image>
+        <view class="item-info">
+          <text class="name">{{item.user.name}}</text>
+          <view class="item-rating">
+            <stars score="{{item.rating.value * 2}}"></stars>
+            <text class="date">{{item.create_time}}</text>
+          </view>
+        </view>
+      </view>
+      <text class="item-content {{ellipsisComment?'ellipsis':'unellipsis'}}" wx:if="{{commentsTotal !== 0}}">{{item.comment}}</text>
+      <text class="item-content" wx:else>暂无评论</text>
+    </view>
+    
+  </view>
+</view>

@@ -1,15 +1,48 @@
 <view class="container">
   <view class="top_group">
-    <image class="top-group-image" src="{{movies_detail.image_url}}"></image>
+    <image class="top-group-image" src="{{movies_detail.pic.normal}}"></image>
     <view class="info-group">
-      <view class="info-group-title">{{movies_detail.title}}  {{movies_detail.year}}</view>
+      <view class="info-group-title">{{movies_detail.title}} {{movies_detail.year}} </view>
       <view class="info-group-title-english">{{movies_detail.original_title}}</view>
-      <view class="info-group-movieInfo">{{movies_detail.info}}</view>
-      <view class="button-group">
-        <button class="btn">想看</button>
-        <button class="btn">看过</button>
+      <view class="rating">
+        <stars score="{{movies_detail.rating.value}}" starSize="25" fontSize="25" fontColor="#595959"></stars>
+        <view class="count">{{movies_detail.rating.count}}人评分</view>
       </view>
+      <view class="info-group-movieInfo">{{movies_detail.card_subtitle}}</view>
     </view>
   </view>
-</view>
+  <view class="tags-list">
+    <view class="tags">
+      <text wx:for="{{tags}}" wx:key="*this">{{item}}</text>
 
+    </view>
+  </view>
+  <view class="intor">
+    <view class="title">简介</view>
+    <view class="info {{ellipsisIntro?'ellipsis':'unellipsis'}}">{{movies_detail.intro}}</view>
+    <view class="showText" bindtap="ellipsis"  data-type="intro">{{ellipsisIntro ? '展开' : '收起'}}</view>
+  </view>
+
+  <view class="commet-group">
+    <view class="comment-title">
+      <text class="title-left">短评</text>
+      <text class="title-right">全部{{commentsTotal}} ></text>
+    </view>
+    <view class="comment-item" wx:for="{{comments}}" wx:key="*id">
+      <view class="item-top">
+        <image src="{{item.user.avatar}}"></image>
+        <view class="item-info">
+          <text class="name">{{item.user.name}}</text>
+          <view class="item-rating">
+            <stars score="{{item.rating.value * 2}}"></stars>
+            <text class="date">{{item.create_time}}</text>
+          </view>
+        </view>
+      </view>
+      <text class="item-content {{ellipsisComment?'ellipsis':'unellipsis'}}" wx:if="{{commentsTotal !== 0}}">{{item.comment}}</text>
+      <text class="item-content" wx:else>暂无评论</text>
+    <view class="showText" bindtap="ellipsis" data-type="comment">{{ellipsisComment ? '展开' : '收起'}}</view>
+    </view>
+    <navigator class="comment-more" url="/pages/comment/comment?type={{type}}&id={{id}}">查看更多短评 ></navigator>
+  </view>
+</view>

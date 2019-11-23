@@ -1,4 +1,4 @@
-<navigator class="scroll-view-navigator" hover-stay-time  url="/pages/movies_detail/movies_detail?image_url={{item.cover.url}}&title={{item.title}}&year={{item.year}}&original_title={{item.original_title}}&info={{item.info}}">
+<navigator class="scroll-view-navigator" hover-stay-time  url="/pages/movies_detail/movies_detail?id={{item.id}}&type={{type}}">
   <view class="scroll-view-item">
     <image class="scroll-view-item-image" src="{{item.cover.url}}"></image>
     <text class="scroll-view-item-title">{{item.title}}</text>

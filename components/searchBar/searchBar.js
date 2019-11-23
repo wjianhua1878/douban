@@ -21,6 +21,13 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    onInputEvent:function(event){
+      // console.log(event);
+      let value = event.detail.value;
+      let data = {
+        value
+      }
+      this.triggerEvent('searchInput', value);
+    }
   }
 })

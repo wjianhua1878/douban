@@ -13,8 +13,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    lists: []
-
+    lists: [],
+    requestType:''
   },
 
   /**
@@ -23,10 +23,17 @@ Page({
   onLoad: function(options) {
     // console.log(options);
     this.data.type = options.type;
+    let requestType = options.request;
+  this.setData({
+    requestType
+  })
     let optionsType = options.type;
     let type = {
       "movies": () => {
-        this.getRequestData(getMovies, 20)
+        this.getRequestData(getMovies, 20);
+        wx.setNavigationBarTitle({
+          title: '电影',
+        })
       },
       "tv": () => {
         this.getRequestData(getTv, 20)
@@ -94,6 +101,7 @@ Page({
     let type = {
       "movies": () => {
         this.getRequestData(getMovies, count);
+        
       },
       "tv": () => {
         this.getRequestData(getTv, count);
@@ -123,7 +131,7 @@ Page({
       let result = res.data.subject_collection_items; //[{},{}]
       this.setData({
         lists: result,
-      })
+      });
       wx.hideLoading();
     }).catch(err => {
       console.log(err)

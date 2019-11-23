@@ -7,7 +7,8 @@ Component({
     item:{
       type:Object,
       value:{}
-    }
+    },
+    type:String
   },
 
   /**

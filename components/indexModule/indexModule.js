@@ -15,7 +15,8 @@ Component({
     moreUlr:{
       type:String,
       value:''
-    }
+    },
+    type:String
   },
 
   /**
