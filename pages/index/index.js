@@ -22,6 +22,7 @@ Page({
     //电影
     getMovies().then(res => {
       let movies = res.data.subject_collection_items; //[{},{}]
+      // console.log(movies);
       this.setData({
         movies,
       })

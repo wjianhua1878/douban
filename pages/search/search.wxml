@@ -1,4 +1,25 @@
 <!--pages/search/search.wxml-->
-<searchBar></searchBar>
-<view>搜索</view>
+<searchBar bindsearchInput="searchInputEvent"></searchBar>
+<view class="history-list" wx:if="{{show}}">
+  <view class="list-top">
+    <view class="top-left">历史搜索记录</view>
+    <view class="top-right" bindtap="onClearEvent">清除</view>
+  </view>
+  <view class="list-item" wx:for="{{history}}" wx:key="id" bindtap="onClickHistoryEvent" data-id="{{item.id}}" data-type="{{item.type}}">
+  {{item.title}}
+  </view>
+</view>
+<view class="search-list" wx:else>
+  <view class="search-item" wx:for="{{movies}}" wx:key="id"  bindtap="onItemClick" data-type="{{item.type}}" data-id="{{item.id}}" data-title="{{item.title}}">
+    <image class="item-image" src="{{item.pic.normal}}"></image>
+    <view class="item-info">
+      <view class="info-title">
+      <text>{{item.title}}</text>
+      <stars score="{{item.rating.value}}"></stars>
+      </view>
+      <view class="info-pubdata">{{item.pubdate}}</view>
+      <text class="info-subtitle">{{item.card_subtitle}}</text>
+    </view>
+  </view>
+</view>
 

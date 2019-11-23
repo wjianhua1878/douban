@@ -1,32 +1,9 @@
-/* .score{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  left: 10rpx;
-  bottom: 20rpx;
-  margin-top: 20rpx;
-} */
-/* .module-group .module .module-scroll-view .scroll-view-navigator .scroll-view-item .score .star{
-  width: 25rpx;
-  height: 25rpx;
-} */
-/* .module-group .module .module-scroll-view .scroll-view-navigator .scroll-view-item .score .score-number{
-  color: #ccc;
-  position: static;
-  font-size: 25rpx;
-  margin-left: 10rpx;
-} */
-
 
 .score{
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  left: 10rpx;
-  bottom: 20rpx;
-  margin-top: 20rpx;
+  margin-top: 10rpx;
 }
  .score .star{
   width: 25rpx;
@@ -34,7 +11,7 @@
   /* flex-basis: 20rpx 20rpx; */
 }
  .score .score-number{
-  position: static;
+  /* position: static; */
   color: #ccc;
   font-size: 25rpx;
   margin-left: 10rpx;
